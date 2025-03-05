@@ -1,85 +1,107 @@
-# AI-Driven Healthcare Chatbot for Patient Triage and Support
+
+# MED-GENIE-Medical Chatbot
+![Screenshot (180)](https://github.com/user-attachments/assets/c704a855-47ad-4ebe-9770-fb1401b2bb35)
 
 
-## Overview
-**AI-Driven Healthcare Chatbot** is an intelligent chatbot designed to assist patients by providing initial triage, symptom analysis, and medical support. The chatbot integrates **React.js, Node.js, Express.js, MongoDB, and Gemini API** to provide an interactive, responsive, and efficient healthcare assistant.
+## Project Overview
+
+This project aims to develop a Medical Chatbot designed to assist patients with preliminary health assessments and provide relevant medical advice. The chatbot uses AI-driven technology to offer guidance based on user input, helping to triage symptoms and suggest possible actions.
+
+### Team Members
+
+- **Avanish Yadav** ( Developer)
+- **Pavani Jain** (Developer)
+- **Utkarsh Kesarwani** (Developer)
+
+### Project Mentor
+
+- **Dr. Parul** (Project Intern Mentor)
 
 ## Features
-- **Symptom Analysis:** Identifies potential health conditions based on user input.
-- **AI-Powered Responses:** Uses the Gemini API for intelligent recommendations.
-- **User Authentication:** Secure login and patient data management.
-- **Medical History Tracking:** Stores past interactions for better diagnosis.
-- **Emergency Alert System:** Notifies healthcare providers in critical situations.
-- **Responsive UI:** Optimized for mobile and desktop use.
-- **Database Storage:** Patient interactions securely stored in MongoDB.
 
+- **User Management:** Secure signup and login processes, with user data securely stored in a MongoDB database.
+- **Symptom Analysis:** AI-driven chatbot for real-time symptom assessment and preliminary medical advice using the Gemini API.
+- **BMI Calculation:** Automatic calculation of Body Mass Index (BMI) based on user inputs, with personalized health recommendations.
+- **Medical Advice:** Offers advice on whether to seek immediate medical attention or monitor symptoms.
+- **Appointment Scheduling:** Integrates with healthcare providers to schedule appointments if necessary.
+- **Health Tips:** Provides general health tips and preventive care advice.
 
+## Technology Stack
 
-## Tech Stack
 - **Frontend:** React.js
-- **Backend:** Node.js, Express.js
+- **Backend:** Node.js with Express.js
 - **Database:** MongoDB
-- **AI API:** Gemini API
+- **API Integration:** Gemini API for natural language processing and symptom analysis
 
-## Installation Guide
-### Prerequisites
-- Install **Node.js** and **MongoDB**
-- Basic knowledge of React.js and Express.js
-- API Key from **Gemini API**
+## System Architecture
+The platform’s architecture is divided into three main components:
 
-### Steps to Set Up the Project
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/yourusername/healthcare-chatbot.git
-   cd healthcare-chatbot
-   ```
-2. **Install Dependencies:**
-   ```bash
-   npm install
-   ```
-3. **Setup Environment Variables:**
-   - Create a `.env` file and add:
-   ```
-   MONGO_URI=your_mongodb_connection_string
-   GEMINI_API_KEY=your_gemini_api_key
-   ```
-4. **Start MongoDB:**
-   ```bash
-   mongod
-   ```
-5. **Run the Backend Server:**
-   ```bash
-   node server.js
-   ```
-6. **Start the Frontend:**
-   ```bash
-   cd client
-   npm start
-   ```
-7. **Access the Application:**
-   - Open `http://localhost:3000/` in your browser.
+- **User Management:** Handles user signup, login, and secure data storage.
+- **Symptom Analysis:** An AI-driven chatbot that processes user inputs and provides medical advice.
+- **Appointment Booking:** A system that allows users to schedule doctor appointments based on chatbot recommendations.
 
+## Installation
 
-## How It Works
-1. **User Input:**
-   - The chatbot asks users about their symptoms.
-2. **AI-Powered Analysis:**
-   - Uses the **Gemini API** to analyze symptoms.
-3. **Recommendations & Support:**
-   - Suggests possible conditions and next steps.
-4. **Emergency Alerts:**
-   - Notifies healthcare professionals if necessary.
-5. **Medical History Storage:**
-   - Saves past interactions for better future recommendations.
+To set up the project locally, follow these steps:
 
-## Sample Code for Express.js API
-```javascript
-const express = require('express');
-const router = express.Router();
-const { analyzeSymptoms } = require('../controllers/chatbotController');
+- **Clone the repository:**
 
-router.post('/analyze', analyzeSymptoms);
-
-module.exports = router;
 ```
+git@github.com:awanishyadav967/Med-Genie.git
+```
+
+- **Install dependencies:**
+
+```
+1. cd client
+2. npm install(install necessary dependency)
+3. npm run dev
+
+```
+- Open second terminal for backend
+```
+1. cd server
+2. (install necessary dependency)
+3. npx nodemon index.js
+
+```
+
+
+
+- **Set up environment variables:** Create a .env file in the server directory and add the following variables
+
+```
+MONGODB_URI=your_mongodb_connection_string
+GEMINI_API_KEY=your_gemini_api_key
+JWT_SECRET=your_jwt_secret
+EMAIL_SERVICE=your_email_service_provider
+EMAIL_USER=your_email_address
+EMAIL_PASS=your_email_password
+```
+
+- **Access the platform:** Open your browser and navigate to ```http://localhost:3000```
+
+
+## Usage
+
+- **Signup/Login:** Create an account or log in with your credentials.
+- **Interact with the Chatbot:** Enter symptoms and receive real-time medical advice.
+- **Calculate BMI:** Automatically compute your BMI and get personalized health advice.
+- **Book Appointments:** Schedule doctor appointments based on the chatbot’s analysis.
+- **Generate Reports:** Download or receive a PDF summary of your interactions.
+
+## Future Work
+
+- **Enhanced AI Capabilities:** Integrating newer AI models for more accurate symptom analysis.
+- **Personalization:** More tailored health advice based on user profiles and historical health data.
+- **EHR Integration:** Linking with Electronic Health Records for comprehensive patient care.
+- **Telemedicine:** Adding features for remote consultations and real-time health monitoring.
+- **Data Privacy:** Implementing advanced security measures to protect patient data.
+
+
+
+
+
+
+
 
